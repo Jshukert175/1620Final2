@@ -32,7 +32,7 @@ class Gui:
         self.attempt_save = Button(self.frame_three, text="Save", command=self.save)
 
         self.frame_three.pack()
-        self.attempt_save.pack(side='bottom', padx=10, pady=10)
+        self.attempt_save.pack(side='bottom', padx=10, pady=25)
 
         self.score_label1 = Label(self.frame_three, text=f"Score 1:")
         self.score_list1 = Entry(self.frame_three)
