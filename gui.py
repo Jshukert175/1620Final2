@@ -139,7 +139,7 @@ class Gui:
                 scores.append(0)
             # Check score ranges (less than 0 or greater than 100)
             for s in scores:
-                if scores[s] < 0 or scores[s] > 100:
+                if s < 0 or s > 100:
                     raise ValueError
         except ValueError:
             self.label_message.config(text="Enter a score between 0 and 100", fg="red")
