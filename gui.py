@@ -149,6 +149,7 @@ class Gui:
 
 
 
+
         with open('data.csv', 'a', newline='') as csvfile:
             content = csv.writer(csvfile)
             content.writerow(["Name", "Score 1", "Score 2", "Score 3", "Score 4", "Final"])
