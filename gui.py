@@ -62,7 +62,7 @@ class Gui:
         # Name
         name = self.input_name.get().strip()
         if len(name) == 0:
-            self.label_message.config(text="Please enter a name")
+            self.label_message.config(text="Please enter a name", fg="red")
             return
         # Attempt num
         try:
@@ -122,7 +122,7 @@ class Gui:
         scores = []
         try:
             if len(self.score_list1.get()) == 0:
-                self.label_message.config(text="Please enter a number 0-100", fg="red")
+                raise ValueError
             else:
                 scores.append(int(self.score_list1.get()))
             if len(self.score_list2.get()) != 0:
@@ -142,7 +142,7 @@ class Gui:
                 if s < 0 or s > 100:
                     raise ValueError
         except ValueError:
-            self.label_message.config(text="Enter a score between 0 and 100", fg="red")
+            self.label_message.config(text="Enter a number between 0 and 100", fg="red")
             return
 
 
