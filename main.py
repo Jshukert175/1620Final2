@@ -6,7 +6,7 @@ def main():
     """
     window = Tk()
     window.title("Final 2")
-    window.geometry("300x300")
+    window.geometry("350x350")
     window.resizable(False, False)
     Gui(window)
 
